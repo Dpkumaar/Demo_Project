@@ -1,0 +1,55 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="four.css">
+    </head>
+    <body>
+        <div id="main">
+            <div class="elem">
+                <h1>Pradeep</h1>
+                <img src="Kriti.jpg" alt="">
+            </div>
+            <div class="elem">
+                <h1>Sandeep</h1>
+                <img src="Kriti1.jpeg" alt="">
+            </div>
+            <div class="elem">
+                <h1>Shanaya</h1>
+                <img src="Kriti2.jpeg" alt="">
+            </div>
+            <div class="elem">
+                <h1>Thanksh</h1>
+                <img src="Kriti3.jpeg" alt="">
+            </div>
+
+        </div>
+        
+        <script>
+            var elem = document.querySelectorAll(".elem");
+
+            elem.forEach(function (val) {
+
+                val.addEventListener("mouseenter", function(){
+                    val.childNodes[3].style.opacity = 1
+                });
+
+                val.addEventListener("mouseleave", function(){
+                    val.childNodes[3].style.opacity = 0
+                });
+
+                val.addEventListener("mousemove", function(dets){
+                    val.childNodes[3].style.left = dets.x+"px"
+                    val.childNodes[3].style.top = dets.y+"px"
+                });
+            })
+
+            
+
+        </script>
+    </body>
+</html>
